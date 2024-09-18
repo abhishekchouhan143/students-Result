@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch Excel Data</title>
+    <title>Student Data Fetch</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Student Marksheet</h1>
-        <form id="rollNoForm">
+        <h1>Fetch Student Data</h1>
+        <form id="studentForm">
             <label for="rollNo">Enter Roll Number:</label>
             <input type="text" id="rollNo" placeholder="Enter Roll No. e.g., 21234C04002" required>
-            <button type="submit">Fetch Marksheet</button>
+
+            <label for="fatherName">Enter Father's Name:</label>
+            <input type="text" id="fatherName" placeholder="Enter Father's Name" required>
+
+            <button type="submit">Fetch Data</button>
         </form>
 
         <div id="result" style="display:none;">
-            <h2>Marksheet</h2>
+            <h2>Student Data</h2>
             <p><strong>Roll Number:</strong> <span id="studentRollNo"></span></p>
             <p><strong>Name:</strong> <span id="name"></span></p>
             <p><strong>English:</strong> <span id="english"></span></p>
@@ -24,15 +28,15 @@
             <p><strong>Math:</strong> <span id="math"></span></p>
             <p><strong>Science:</strong> <span id="science"></span></p>
             <p><strong>Social Science:</strong> <span id="socialScience"></span></p>
-            <!-- add new  -->
-            <p><strong>Total marks:</strong> <span id="totalMarks"></span></p>
+            <p><strong>Total Marks:</strong> <span id="totalMarks"></span></p>
+            <p><strong>Percentage:</strong> <span id="percentage"></span></p>
+            <p><strong>Email ID:</strong> <span id="emailId"></span></p>
+            <p><strong>Father's Name:</strong> <span id="fatherNameDisplay"></span></p>
         </div>
     </div>
 
-    <!-- Include XLSX.js Library via CDN -->
+    <!-- Include XLSX.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script src="path/to/xlsx.full.min.js"></script>
-
     <script src="script.js"></script>
 </body>
 </html>

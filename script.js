@@ -1,10 +1,11 @@
-document.getElementById('rollNoForm').addEventListener('submit', function(e) {
+document.getElementById('studentForm').addEventListener('submit', function(e) {
     e.preventDefault();  // Prevent the form from submitting
 
-    const rollNo = document.getElementById('rollNo').value;  // Get roll number input
+    const rollNo = document.getElementById('rollNo').value;
+    const fatherName = document.getElementById('fatherName').value;
 
     // Fetch the Excel file
-    fetch('students.xlsx')  // Ensure this path is correct relative to your project folder
+    fetch('students.xlsx')  // Ensure the path to students.xlsx is correct
         .then(response => response.arrayBuffer())
         .then(data => {
             const workbook = XLSX.read(data, { type: "array" });
@@ -13,8 +14,8 @@ document.getElementById('rollNoForm').addEventListener('submit', function(e) {
             // Convert the sheet to JSON
             const studentsData = XLSX.utils.sheet_to_json(sheet);
 
-            // Find the student by roll number
-            const student = studentsData.find(s => s.RollNo === rollNo);
+            // Find the student by roll number and father's name
+            const student = studentsData.find(s => s.RollNo === rollNo && s.FatherName.toLowerCase() === fatherName.toLowerCase());
 
             if (student) {
                 // Display the student data
@@ -25,11 +26,13 @@ document.getElementById('rollNoForm').addEventListener('submit', function(e) {
                 document.getElementById('hindi').textContent = student.Hindi;
                 document.getElementById('math').textContent = student.Math;
                 document.getElementById('science').textContent = student.Science;
-                document.getElementById('socialScience').textContent = student.SocialScience['Social Science'];
-                //add new 
-                document.getElementById('totalMarks').textContent = student.totalMarks['totalMarks']
+                document.getElementById('socialScience').textContent = student['Social Science'];
+                document.getElementById('totalMarks').textContent = student.Total;
+                document.getElementById('percentage').textContent = student.Percentage;
+                document.getElementById('emailId').textContent = student.EmailId;
+                document.getElementById('fatherNameDisplay').textContent = student.FatherName;
             } else {
-                alert("Roll number not found.");
+                alert("Student not found. Please check the roll number and father's name.");
             }
         })
         .catch(error => {
