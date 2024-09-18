@@ -104,7 +104,7 @@ button:hover {
       margin-left: 165px;
    }
    .marks-margin3{
-      margin-left: 176px;
+      margin-left: 170px;
    }
    .marks-margin4{
       margin-left: 148px;
@@ -124,5 +124,8 @@ button:hover {
     }
     .e-mail{
       margin-left: 10px;
+    }
+    h2{
+      font-size: 16px;
     }
 }
