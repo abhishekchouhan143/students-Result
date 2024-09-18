@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Marksheet</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Excel Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="container">
-      <div>
-        <h1>Created by Abhishek chouhan</h1>
-      </div>
-      <h1>Student Marksheet</h1>
-      <form id="rollNoForm">
-        <label for="rollNo">Enter Roll Number:</label>
-        <input type="text" id="rollNo" name="rollNo" required />
-        <button type="submit">Get Marksheet</button>
-      </form>
+        <h1>Student Marksheet</h1>
+        <form id="rollNoForm">
+            <label for="rollNo">Enter Roll Number:</label>
+            <input type="text" id="rollNo" placeholder="Enter Roll No. e.g., 21234C04002" required>
+            <button type="submit">Fetch Marksheet</button>
+        </form>
 
-      <div id="result" style="display: none">
-        <h2>Marksheet:</h2>
-        <p><strong>Name:</strong> <span id="name"></span></p>
-        <p><strong>English:</strong> <span id="english"></span></p>
-        <p><strong>Hindi:</strong> <span id="hindi"></span></p>
-        <p><strong>Math:</strong> <span id="math"></span></p>
-        <p><strong>Science:</strong> <span id="science"></span></p>
-        <p><strong>Social Science:</strong> <span id="socialScience"></span></p>
-      </div>
+        <div id="result" style="display:none;">
+            <h2>Marksheet</h2>
+            <p><strong>Roll Number:</strong> <span id="studentRollNo"></span></p>
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>English:</strong> <span id="english"></span></p>
+            <p><strong>Hindi:</strong> <span id="hindi"></span></p>
+            <p><strong>Math:</strong> <span id="math"></span></p>
+            <p><strong>Science:</strong> <span id="science"></span></p>
+            <p><strong>Social Science:</strong> <span id="socialScience"></span></p>
+        </div>
     </div>
 
+    <!-- Include XLSX.js Library via CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <!-- <script src="script.js"></script> -->
-  </body>
+    <script src="path/to/xlsx.full.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
 </html>
