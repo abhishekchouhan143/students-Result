@@ -5,7 +5,7 @@ body {
 
 .container {
    margin: 70px auto;
-   width:60%;
+   width:100vw;
    background-color: white;
    padding: 20px;
    border-radius: 10px;
@@ -78,4 +78,51 @@ button:hover {
 }
 .marks-margin6{
    margin-left: 244px;
+}
+/* responsive website  */
+@media screen and (max-width: 600px) {
+   .container {
+      margin: 70px auto;
+      width:100vw;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+   }
+   .subject-marks {
+      margin-left: -4px;
+      margin-top: -362px;
+    }
+    .subject-margin {
+      margin-left: 18px;
+    }
+    .marks-margin1{
+      margin-left: 143px;
+   }
+   .marks-margin2{
+      margin-left: 165px;
+   }
+   .marks-margin3{
+      margin-left: 176px;
+   }
+   .marks-margin4{
+      margin-left: 148px;
+   }
+   .marks-margin5{
+      margin-left: 98px;
+   }
+   .marks-margin6{
+      margin-left: 123px;
+   }
+   .th {
+      padding-left: 11px;
+      padding-right: 90px;
+    }
+    .percentage{
+      margin-left: 10px;
+    }
+    .e-mail{
+      margin-left: 10px;
+    }
 }
