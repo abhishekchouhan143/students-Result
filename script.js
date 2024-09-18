@@ -25,7 +25,9 @@ document.getElementById('rollNoForm').addEventListener('submit', function(e) {
                 document.getElementById('hindi').textContent = student.Hindi;
                 document.getElementById('math').textContent = student.Math;
                 document.getElementById('science').textContent = student.Science;
-                document.getElementById('socialScience').textContent = student['Social Science'];
+                document.getElementById('socialScience').textContent = student.SocialScience['Social Science'];
+                //add new 
+                document.getElementById('totalMarks').textContent = student.totalMarks['totalMarks']
             } else {
                 alert("Roll number not found.");
             }
