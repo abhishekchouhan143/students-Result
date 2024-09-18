@@ -1,10 +1,10 @@
 document.getElementById('rollNoForm').addEventListener('submit', function(e) {
     e.preventDefault();  // Prevent the form from submitting
 
-    const rollNo = document.getElementById('rollNo').value;
+    const rollNo = document.getElementById('rollNo').value;  // Get roll number input
 
-    // Fetch and read the Excel file
-    fetch('students.xlsx')
+    // Fetch the Excel file
+    fetch('students.xlsx')  // Ensure this path is correct relative to your project folder
         .then(response => response.arrayBuffer())
         .then(data => {
             const workbook = XLSX.read(data, { type: "array" });
