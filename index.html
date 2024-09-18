@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Data Fetch</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Fetch Student Data</h1>
-        <form id="studentForm">
-            <label for="rollNo">Enter Roll Number:</label>
-            <input type="text" id="rollNo" placeholder="Enter Roll No. e.g., 21234C04002" required>
-
-            <label for="fatherName">Enter Father's Name:</label>
-            <input type="text" id="fatherName" placeholder="Enter Father's Name" required>
-
-            <button type="submit">Fetch Data</button>
-        </form>
-
-        <div id="result" style="display:none;">
-            <h2>Student Data</h2>
-            <p><strong>Roll Number:</strong> <span id="studentRollNo"></span></p>
-            <p><strong>Name:</strong> <span id="name"></span></p>
-            <p><strong>English:</strong> <span id="english"></span></p>
-            <p><strong>Hindi:</strong> <span id="hindi"></span></p>
-            <p><strong>Math:</strong> <span id="math"></span></p>
-            <p><strong>Science:</strong> <span id="science"></span></p>
-            <p><strong>Social Science:</strong> <span id="socialScience"></span></p>
-            <p><strong>Total Marks:</strong> <span id="totalMarks"></span></p>
-            <p><strong>Percentage:</strong> <span id="percentage"></span></p>
-            <p><strong>Email ID:</strong> <span id="emailId"></span></p>
-            <p><strong>Father's Name:</strong> <span id="fatherNameDisplay"></span></p>
+      <h1>Declare Class 10<sup>th</sup> Result</h1>
+      <form id="studentForm">
+        <label for="rollNo">Enter Roll Number:</label>
+        <input
+          type="text"
+          id="rollNo"
+          placeholder="Enter Roll No. e.g., 21234C04002"
+          required
+        />
+        <div>
+          <label for="fatherName">Enter Father's Name:</label>
+          <input
+            type="text"
+            id="fatherName"
+            placeholder="Enter Father's Name"
+            required
+          />
         </div>
+
+        <button type="submit">View Result</button>
+      </form>
+
+      <div id="result" style="display: none">
+        <h2>Student Data</h2>
+        <p><strong>Roll Number:</strong> <span id="studentRollNo"></span></p>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p>
+          <strong>Father's Name:</strong> <span id="fatherNameDisplay"></span>
+        </p>
+        <hr />
+        <!-- vertex line  -->
+        <hr class="vertex-line" />
+        <div class="subject-marks">
+          <!-- create table  -->
+          <table>
+            <tr>
+              <th class="th">Subject Name</th>
+              <th>Marks</th>
+            </tr>
+          </table>
+          <hr>
+          <!-- table end  -->
+          <p><strong class="subject-margin">English</strong> <span class="marks-margin1" id="english"></span></p>
+          <p><strong class="subject-margin">Hindi</strong> <span class="marks-margin2" id="hindi"></span></p>
+          <p><strong class="subject-margin">Math</strong> <span class="marks-margin3" id="math"></span></p>
+          <p><strong class="subject-margin">Science</strong> <span class="marks-margin4" id="science"></span></p>
+          <p>
+            <strong class="subject-margin">Social Science</strong>
+            <span class="marks-margin5" id="socialScience"></span>
+          </p>
+          <hr />
+          <p><strong class="subject-margin">Total Marks</strong> <span class="marks-margin6" id="totalMarks"></span></p>
+          <hr>
+          <p><strong>Percentage:</strong> <span id="percentage"></span></p>
+          <p><strong>Email ID:</strong> <span id="emailId"></span></p>
+        </div>
+        <hr />
+      </div>
     </div>
 
     <!-- Include XLSX.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
